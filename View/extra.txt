@@ -1,0 +1,17 @@
+else if(file_exists('../data/data.json'))  
+           {  
+                $extra = array(  
+                     'name'               =>     $_POST['name'],  
+                     'e-mail'          =>     $_POST["email"],  
+                     'username'     =>     $_POST["un"],  
+                     'gender'     =>     $_POST["gender"],  
+                     'dob'     =>     $_POST["dob"]  
+                ); 
+                addData($extra);
+           }  
+           else  
+           {  
+                $error = 'JSON File not exits';  
+           }  
+
+           action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"
